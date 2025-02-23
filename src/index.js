@@ -3,6 +3,7 @@ const fs = require("fs");
 const os = require("os");
 var _ = require("lodash");
 const connectDB = require("./appMongoose.js");
+require("dotenv").config();
 
 //Instance of express stored in app
 const app = express();
@@ -23,6 +24,8 @@ const menuItemRoutes = require("./routes/menu.route.js");
 app.use("/", personRoutes);
 app.use("/", menuItemRoutes);
 
-app.listen(8000, () => {
+const PORT = process.env.PORT || 8000;
+
+app.listen(PORT, () => {
   console.log("Server is running ");
 });

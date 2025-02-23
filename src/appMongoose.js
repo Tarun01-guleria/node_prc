@@ -1,6 +1,6 @@
 const { connect } = require("mongoose");
-
-const MONGO_URL = "mongodb+srv://node123:node123@cluster0.wyxix.mongodb.net";
+require("dotenv").config();
+const MONGO_URL = process.env.DB_URL;
 const DB_NAME = "mern";
 
 const connectDB = async () => {
