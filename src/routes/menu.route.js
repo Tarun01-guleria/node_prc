@@ -59,6 +59,8 @@ router.put("/menu/:id", async (req, res) => {
   }
 });
 
+//Delete operation
+
 router.delete("/menu/:id", async (req, res) => {
   try {
     const { id } = req.params;
